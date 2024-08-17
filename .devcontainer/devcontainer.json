@@ -1,0 +1,12 @@
+{
+  "name": "lru-cache",
+  "dockerFile": "./Dockerfile",
+  "forwardPorts": [8080, 3000, 9090],
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "runArgs": [
+    "--network=host"
+  ],
+  "remoteUser": "root"
+}
